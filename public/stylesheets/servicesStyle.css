@@ -1,0 +1,46 @@
+/*
+Filename- servicesStyle.css
+StudentName - Kunal
+StudentId - 301178751
+Date - Feb 8,2022
+*/
+
+body {
+    content: "";
+    background: #040404 url("/images/black.jpg") top right no-repeat;
+    background-size: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width:1250px;
+    z-index: -1;
+    margin-left: 1.5cm;
+    color: aliceblue;
+    font-size: 70px;
+    line-height: 1;
+    font-family: "Poppins", sans-serif;
+}
+
+#projects{
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:tomato;
+    text-decoration: italic;
+}
+.list-group list-group-flush{
+    max-width: 10px;
+}
+
+.list-group-item{
+    color:black;
+    font-size: 30px;
+    width:400px;
+    height: 55px;
+    background:lightcoral;
+    text-decoration-style: double;
+    border-color: rgb(23, 23, 240);
+    border-radius: 5px ;
+}
+
+

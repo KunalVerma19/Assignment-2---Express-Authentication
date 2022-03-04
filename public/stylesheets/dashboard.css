@@ -1,0 +1,122 @@
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #040404;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #aaaaaa;
+    border-radius: 20px;
+    border: 3px solid #040404;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    
+    color: #fff;
+    overflow: hidden;
+    width: 100%;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    background: #040404 url("/images/black.jpg") top right no-repeat;
+    /* opacity: 0.9; */
+    background-size: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    z-index: -1;
+}
+
+@media (min-width: 1024px) {
+    body::before {
+        background-attachment: fixed;
+    }
+}
+
+.nav-menu {
+    margin-top: 20px;
+    
+}
+
+
+
+
+.askIfUser {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
+body {
+    overflow: auto;
+}
+
+.nav-menu ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu li+li {
+    margin-right: 12px;
+}
+
+#header a {
+    text-decoration: none;
+}
+
+.nav-menu a {
+    display: block;
+    position: relative;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+.nav-menu a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 4px;
+    left: 0;
+    background-color: #18d26e;
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-menu a:hover:before,
+.nav-menu li:hover>a:before,
+.nav-menu .active>a:before {
+    visibility: visible;
+    width: 52px;
+}
+
+.nav-menu a:hover,
+.nav-menu .active>a,
+.nav-menu li:hover>a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Form box */
+
+.form-box {
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 5px;
+
+}

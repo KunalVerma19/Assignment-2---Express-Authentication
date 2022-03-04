@@ -1,0 +1,50 @@
+<%- include( 'partials/header' ); %>
+
+    <body>
+
+        <header>
+            <%- include( 'partials/navbar' ); %>
+        </header>
+
+
+        <main>
+            <div class="container" style="max-width: 625px;">
+                <form method="post" action="/update/<%= data._id %>">
+
+                    <fieldset>
+                        <legend class="m-2"
+                            style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 28px; font-weight: 900;">
+                            Update Contact data of <%= data.name %></legend>
+    
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name"
+                                value="<%= typeof data.name != 'undefined' ? data.name : '' %>" />
+                        </div>
+    
+                        <div class="mb-3">
+                            <label for="Phone" class="form-label">Phone Number</label>
+                            <input type="text" class="form-control" id="Phone" name="Phone"
+                                value="<%= typeof data.phone != 'undefined' ? data.phone : '' %>" />
+                        </div>
+    
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                value="<%= typeof data.email != 'undefined' ? data.email : '' %>" />
+                        </div>
+    
+    
+    
+                        <button type="submit" style="width: 100%;" class="btn btn-warning mb-2">Submit</button>
+                        <a href="/dashboard" style="width: 100%;" class="btn btn-danger mb-2">Close</a>
+                    </fieldset>
+                </form>
+            </div>
+        </main>
+
+        <div style="height: 100px;"></div>
+        <%- include( 'partials/footer' ); %>
+    </body>
+
+    </html>

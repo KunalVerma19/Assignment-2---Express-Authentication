@@ -1,0 +1,111 @@
+<%- include( 'partials/header'); %>
+<body>
+
+    <header>
+        <%- include( 'partials/navbar'); %>
+    </header>
+
+
+    <main>
+
+        <div id="updateForm" class="container form-box" style="display: none;">
+
+            <form method="post" action="/addcontact">
+
+                <fieldset>
+                    <legend class="m-2"
+                        style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 28px; font-weight: 900;">
+                        Add Contact</legend>
+
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name"
+                            value="<%= typeof name != 'undefined' ? name : '' %>" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="Phone" class="form-label">Phone Number</label>
+                        <input type="text" class="form-control" id="Phone" name="Phone"
+                            value="<%= typeof Phone != 'undefined' ? Phone : '' %>" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email"
+                            value="<%= typeof email != 'undefined' ? email : '' %>" />
+                    </div>
+
+
+
+                    <button type="submit" style="width: 100%;" class="btn btn-warning mb-2">Submit</button>
+                </fieldset>
+            </form>
+
+        </div>
+
+        <div class="container mt-3" style="overflow-x: scroll; padding-left: 5px; padding-right: 5x;">
+
+            <div style="display: flex; justify-content: flex-end; " class="mb-3">
+
+                <button type="button" id="addNewContact" class="btn btn-warning">Add a new contact</button>
+                <form method="post" action="/logout"><button type="submit" style="margin-left: 10px;" id="logoutBtn" class="btn btn-danger">Logout</button></form>
+                
+
+            </div>
+
+
+
+            <table class="table table-hover" style="background-color: rgba(14, 11, 11, 0.541);">
+
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Phone Number</th>
+                        <th scope="col">Email Address</th>
+                        <th scope="col">Options</th>
+                    </tr>
+                </thead>
+
+                <tbody class="gfg">
+                    <% var i = 0; %>
+                    <% contacts.forEach(user => { %>
+                    <tr>
+                        <% i++; %>
+                        <th scope="row"><%= i %></th>
+                        <td><%= user.name %></td>
+                        <td><%= user.phone %></td>
+                        <td><%= user.email %></td>
+                        <td>
+                            <div class="d-grid gap-2 d-md-block">
+                                <a href="/update/<%= user._id %>" class="btn btn-primary btn-sm" type="button">Update</a>
+                                <a href="/delete/<%= user._id %>" class="btn btn-danger btn-sm" type="button">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                    <% }); %>
+
+                </tbody>
+
+            </table>
+
+        </div>
+    </main>
+
+    <link rel="stylesheet" href ="/stylesheets/footer.css">
+    <footer>
+        <br><br>
+            <hr>
+            &copy; Copyright Kunal Verma - 301178751
+            <br><br>
+      </footer>
+
+
+
+
+    <script src="/javascripts/bootstrap.min.js"></script>
+
+    <script src="/javascripts/dashboard.js"></script>
+</body>
+
+</html>

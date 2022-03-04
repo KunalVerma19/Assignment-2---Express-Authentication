@@ -1,0 +1,50 @@
+<%- include( 'partials/header'); %>
+
+<body>
+
+  <header>
+    <%- include( 'partials/navbar'); %>
+  </header>
+
+
+  <main>
+    <div class="container" style="max-width: 625px;">
+
+      <form method="post" action="/users/login">
+        <fieldset>
+          <div class="form-group mb-4">
+
+            <h2 style="font-family: 'Times New Roman', Times, serif;" class="form-label mt-4">Login</h2>
+            <% if (locals.message != "") { %>
+            <div class="alert alert-dismissible alert-danger">
+              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+              <%= message %>
+            </div>
+            <% } %>
+
+
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+              <label for="email">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+              <label for="password">Password</label>
+            </div>
+          </div>
+        </fieldset>
+        <button type="submit"
+          style="padding-top: 10px; font-size: 24px; font-weight: 900; color: white; padding-bottom: 10px; width: 100%;"
+          class="btn btn-warning">Login</button>
+
+        <a class="askIfUser" href="/users/register">Don't Have a Account?</a>
+      </form>
+
+    </div>
+  </main>
+
+  <div style="height: 100px;"></div>
+  <%- include( 'partials/footer'); %>
+</body>
+
+</html>

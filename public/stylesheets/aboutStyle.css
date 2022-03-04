@@ -1,0 +1,41 @@
+/*
+Filename- aboutyStyle.css
+StudentName - Kunal
+StudentId - 301178751
+Date - Feb 8,2022
+*/
+body {
+    content: "";
+    position: fixed;
+    background: #040404 url("/images/black.jpg") top right no-repeat;
+    background-size: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width:1220px;
+    z-index: -1;
+    margin-left: 1.5cm;
+    color: white;
+    font-size: 20px;
+    line-height: 1;
+    font-family: "Open Sans", sans-serif;
+}
+
+#start{
+    color:yellowgreen;
+    font-size: xx-large;
+}
+#coding{
+    color: red;
+    font-weight: bolder;
+    text-align: center;
+}
+.row{
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+
+

@@ -1,0 +1,81 @@
+<%- include('partials/header'); %>
+<link rel="stylesheet" href ="/stylesheets/contactStyle.css">
+</head>
+<body>
+    
+    <div class="index">
+        <nav class="navbar navbar-expand-lg nav-menu nav-menu-about">
+            <div class="container">
+                <button class="navbar-toggler ms-auto bg-dark navbar-dark" type="button" data-toggle="collapse"
+                    data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse ms-auto p-2"
+                    id="navbarNavAltMarkup">
+                    <div class="navbar-nav navbar-right">
+                        <li ><a class="nav-link" href="/">Home&nbsp;</a></li>
+                        <li><a class="nav-link" href="about">About</a></li>
+                        <li><a class="nav-link" href="projects">Projects</a></li>
+                        <li><a class="nav-link" href="services">Services</a></li>
+                        <li class="active"><a class="nav-link" href="contact">Contact</a></li>
+                        <li><a class="nav-link" href="/dashboard">Dashboard</a></li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    
+    <br>
+
+    <P id="contact">CONTACT ME ! </P>
+
+
+<form action="mailto: kverma31@my.centennialcollege.ca" method="post">
+    <fieldset>
+            <table class="personalInfo">
+                <tr><br>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="txtFName" size="30" tabindex="1"><br><br></td>
+                    <td><input type="text" name="txtLName" size="30" tabindex="3"><br><br></td>
+                </tr>
+                 <tr><br>
+                    <td>Phone Number</td>
+                    <td>Email</td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="numPhoneNumber" size="30" tabindex="5"><br><br></td>
+                    <td><input type="email" name="txtEmail" size="30" tabindex="7"><br><br></td>
+                </tr>
+                <tr>
+                    <td>Message</td>
+                 <tr>
+                    <td>
+                        <textarea cols="60" name="txtSpecialRequests" rows="7" tabindex="9">Type here</textarea>
+                        <br><br><br><br>
+                     </td>
+                     <td></td>
+                 </tr>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="btnSubmit" name="btnSubmit" tabindex="11" type="submit" value="Submit">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class = "btnReset" name="btnReset" tabindex="13" type="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+        </legend>
+    </fieldset>
+
+</form> 
+
+
+
+
+</body>
+</div>
+<%- include('partials/footer'); %>

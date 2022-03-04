@@ -1,0 +1,102 @@
+/*
+Filename- contactStyle.css
+StudentName - Kunal
+StudentId - 301178751
+Date - Feb 8,2022
+*/
+
+
+body {
+    content: "";
+    background: #040404 url("/images/black.jpg") top right no-repeat;
+    background-size: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width:1250px;
+    z-index: -1;
+    margin-left: 1.5cm;
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+#contact{
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:lightseagreen;
+    text-decoration: italic;
+    margin-top: 80px;
+}
+
+fieldset{
+	margin-bottom: 10px;
+	border-radius: 10px;
+	border: 4px solid #333333;
+	box-shadow: 5px 5px 5px 5px whitesmoke;
+	
+	font-size: 1.15em;
+	color: ightseagreen;
+    height:520px;
+    opacity: 1;
+}
+.legText{
+	width: 400px;
+	height: auto;
+}
+.personalInfo{
+    width: 100%;
+    padding-bottom: 40px;
+	margin: 5px 0px 5px 10px;
+}
+input {
+    background-color: #333333;
+    color: white;
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgb(0 0 0 / 50%);
+    font-size: 1em;
+    border-radius: 5px;
+}
+textarea{
+    background-color: #333333;
+    color: white;
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgb(0 0 0 / 50%);
+    font-size: 1em;
+    border-radius: 5px;
+    height: 60px;
+    width: 600px;
+}
+.btnSubmit{
+    width: 150px;;
+}
+.btnSubmit,
+.btnReset{
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 120%;
+    background-color: rgb(22,22,22);
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow: 5px 5px 10px rgb(0 0 0 / 50%);
+}
+.callIcon{
+    text-align: right;
+    padding-left: 25px;
+    padding-bottom: 15px;
+    font-size: 70px;
+}
+.callData{
+    text-align: left;
+    padding-bottom:10px;
+    font-size: 40px;
+}
+.contactInfo{
+    margin-left: 430px;
+}
